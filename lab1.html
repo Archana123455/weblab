@@ -1,34 +1,147 @@
+
 <html>
 <head>
-    <title>Lab 1</title>
+    <title>V Semester B.E Timetable</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 6px;
+        }
+
+        th {
+            font-size: 14px;
+        }
+
+        .day {
+            font-size: 18px;
+        }
+
+        .break {
+            background-color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Lab 1</h1>
-    <hr>
+    <h1>V Semester B.E Timetable for the Academic Year 2026-2027(ODD)</h1>
 
-    <table border="1">
+    <div class="details">
+        <span>Semester/ Section: &nbsp; 5<sup>th</sup> ‘B’</span>
+        <span>Division-1</span>
+        <span>w.e.f.:28-08-2026</span>
+        <span>Class Room: Lab-CR-203</span>
+    </div>
+
+    <table>
+
+        <!-- TIME ROW -->
         <tr>
-            <th>Day</th>
-            <th>1<br>8:30-9:25</th>
-            <th>2<br>9:25-10:20</th>
-            <th>3<br>10:35-11:35</th>
-            <th>4<br>11:35-12:40</th>
-            <th>5<br>12:40-1:35</th>
-            <th>6<br>1:35-2:40</th>
-            <th>7<br>2:40-4:10</th>
+            <th rowspan="2"> </th>
+
+            <th>I<br>8.30-9.25</th>
+            <th>II<br>9.25-10.20</th>
+
+            <!-- Break -->
+            <th rowspan="7"></th>
+
+            <th>III<br>10.40-11.35</th>
+            <th>IV<br>11.35-12.30</th>
+
+            <!-- Break -->
+            <th rowspan="7"></th>
+
+            <th>V<br>1.25-2.20</th>
+            <th>VI<br>2.20-3.15</th>
+            <th>VII<br>3.15-4.10</th>
         </tr>
 
+        <!-- MONDAY -->
         <tr>
-            <td>Monday</td>
-            <td>SE</td>
-            <td>CN</td>
-            <td>PE1</td>
-            <td rowspan="6">Tea Break</td>
+            <td class="day">MONDAY</td>
             <td>SE</td>
             <td>TOC</td>
-            <td rowspan="6">Lunch Break</td>
+            <td>CN</td>
+            <td>PE-1</td>
+            <td colspan="3">MINI PROJECT</td>
+        </tr>
+
+        <!-- TUESDAY -->
+        <tr>
+            <td class="day">TUESDAY</td>
+            <td>PE-1</td>
+            <td>RMIPR</td>
+            <td>TOC</td>
+            <td>PROCTORING</td>
+            <td colspan="3">WEB LAB</td>
+        </tr>
+
+        <!-- WEDNESDAY -->
+        <tr>
+            <td class="day">WEDNESDAY</td>
+            <td>CN</td>
+            <td>TOC</td>
+            <td colspan="2">CN LAB</td>
+            <td colspan="3">YOGA (NCMC)</td>
+        </tr>
+
+        <!-- THURSDAY -->
+        <tr>
+            <td class="day">THURSDAY</td>
+            <td>RMIPR</td>
+            <td>CN</td>
+            <td>SE</td>
+            <td>MINI PROJECT</td>
+            <td>PE-1</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <!-- FRIDAY -->
+        <tr>
+            <td class="day">FRIDAY</td>
+            <td>TOC</td>
+            <td>SE</td>
+            <td colspan="2">EVS(PROJECTS)</td>
+            <td colspan="2">PLACEMENTS</td>
+            <td></td>
+        </tr>
+
+        <!-- SATURDAY -->
+        <tr>
+            <td class="day">SATURDAY</td>
+            <td colspan="2">IIC Activities</td>
+            <td colspan="2">Departmental Activities</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
 
     </table>
