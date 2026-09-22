@@ -1,124 +1,136 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>V Semester B.E Timetable</title>
+    <title>V Semester Timetable</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .details {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 3px;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: center;
-            font-weight: bold;
+            font-family: Arial, sans-serif;
         }
 
         th, td {
             border: 1px solid black;
             padding: 6px;
+            font-size: 14px;
         }
 
         th {
-            font-size: 14px;
+            font-weight: bold;
         }
 
         .day {
             font-size: 18px;
+            font-weight: bold;
         }
 
-        .break {
-            background-color: white;
+        .title {
+            font-size: 24px;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>V Semester B.E Timetable for the Academic Year 2026-2027(ODD)</h1>
+    <!-- Title -->
+    <h1 style="text-align:center;">
+        V Semester B.E Timetable for the Academic Year 2026-2027(ODD)
+    </h1>
 
-    <div class="details">
-        <span>Semester/ Section: &nbsp; 5<sup>th</sup> ‘B’</span>
-        <span>Division-1</span>
-        <span>w.e.f.:22-09-2026</span>
-        <span>Class Room: Lab-CR-203</span>
-    </div>
+    <!-- Details -->
+    <table style="border:none;">
+        <tr>
+            <td style="border:none;"><b>Semester/ Section:</b> 5<sup>th</sup> 'B'</td>
+            <td style="border:none;"><b>Division-1</b></td>
+            <td style="border:none;"><b>w.e.f.:28-08-2026</b></td>
+            <td style="border:none;"><b>Class Room: Lab-CR-203</b></td>
+        </tr>
+    </table>
 
+    <br>
+
+    <!-- Timetable -->
     <table>
 
-        <!-- TIME ROW -->
+        <!-- Time heading -->
         <tr>
-            <th rowspan="2"> </th>
+            <th> </th>
 
             <th>I<br>8.30-9.25</th>
+
             <th>II<br>9.25-10.20</th>
 
-            <!-- Break -->
-            <th rowspan="7"></th>
+            <th rowspan="7">
+                10.20-<br>10.40
+            </th>
 
             <th>III<br>10.40-11.35</th>
+
             <th>IV<br>11.35-12.30</th>
 
-            <!-- Break -->
-            <th rowspan="7"></th>
+            <th rowspan="7">
+                12.30-<br>1.25
+            </th>
 
             <th>V<br>1.25-2.20</th>
+
             <th>VI<br>2.20-3.15</th>
+
             <th>VII<br>3.15-4.10</th>
         </tr>
 
         <!-- MONDAY -->
         <tr>
             <td class="day">MONDAY</td>
+
             <td>SE</td>
             <td>TOC</td>
+
             <td>CN</td>
             <td>PE-1</td>
+
             <td colspan="3">MINI PROJECT</td>
         </tr>
 
         <!-- TUESDAY -->
         <tr>
             <td class="day">TUESDAY</td>
+
             <td>PE-1</td>
             <td>RMIPR</td>
+
             <td>TOC</td>
             <td>PROCTORING</td>
+
             <td colspan="3">WEB LAB</td>
         </tr>
 
         <!-- WEDNESDAY -->
         <tr>
             <td class="day">WEDNESDAY</td>
+
             <td>CN</td>
             <td>TOC</td>
+
             <td colspan="2">CN LAB</td>
-            <td colspan="3">YOGA (NCMC)</td>
+
+            <td></td>
+            <td colspan="2">YOGA (NCMC)</td>
         </tr>
 
         <!-- THURSDAY -->
         <tr>
             <td class="day">THURSDAY</td>
+
             <td>RMIPR</td>
             <td>CN</td>
+
             <td>SE</td>
             <td>MINI PROJECT</td>
+
             <td>PE-1</td>
             <td></td>
             <td></td>
@@ -127,18 +139,23 @@
         <!-- FRIDAY -->
         <tr>
             <td class="day">FRIDAY</td>
+
             <td>TOC</td>
             <td>SE</td>
+
             <td colspan="2">EVS(PROJECTS)</td>
-            <td colspan="2">PLACEMENTS</td>
-            <td></td>
+
+            <td colspan="3">PLACEMENTS</td>
         </tr>
 
         <!-- SATURDAY -->
         <tr>
             <td class="day">SATURDAY</td>
+
             <td colspan="2">IIC Activities</td>
+
             <td colspan="2">Departmental Activities</td>
+
             <td></td>
             <td></td>
             <td></td>
