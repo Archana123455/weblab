@@ -17,19 +17,22 @@
 
 <body>
 
-    <p id="demo"></p>
+    <p id="demo">TEXT GROWING</p>
 
     <script>
         var font_size = 5;
         var p = document.getElementById("demo");
+        var grow;
+        var shrink;
 
-        var grow = setInterval(growing, 1000);
+        grow = setInterval(growing, 1000);
 
         function growing() {
-            font_size += 5;
+            font_size = font_size + 5;
+
             p.innerHTML = "TEXT GROWING";
-            p.setAttribute("style",
-                "font-size:" + font_size + "px; color: red");
+            p.style.fontSize = font_size + "px";
+            p.style.color = "red";
 
             if (font_size >= 50) {
                 clearInterval(grow);
@@ -38,10 +41,11 @@
         }
 
         function shrinking() {
-            font_size -= 5;
+            font_size = font_size - 5;
+
             p.innerHTML = "TEXT SHRINKING";
-            p.setAttribute("style",
-                "font-size:" + font_size + "px; color: blue");
+            p.style.fontSize = font_size + "px";
+            p.style.color = "blue";
 
             if (font_size <= 5) {
                 clearInterval(shrink);
@@ -52,4 +56,5 @@
 
 </body>
 </html>
+
 
