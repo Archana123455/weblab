@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style>
+	body {
+
+		background: #ffffd;display:flex;justify-content:center;margin-top:100px; }
+		.box { background:#a8d8e6; border:1px solid brown; padding: 20px; width:250px; text-align:center;border-radius:10px; }
+		input,select, button{width: 100%; padding: 7px;  margin:6px 0; }
+	</style>
+    </head>
+    <body>
+    	<div> class="b0x">
+    		<h3>Calculator</h3>
+    		<input id="n1" placeholder="="Enter First number">
+    		<select id="op">
+    			
+    			<option value="+">+ (Add)</option>
+    			<option value="-">+ (Sub)</option>
+    			<option value="*">+ (Mul)</option>
+    			<option value="/">+ (Div)</option>
+    		</select>
+    		<input id="n1" placeholder="="Enter First number">
+    		<button onclick="calc()">Calculate</button>
+    		<p id="res"></p>
+    	</div>
+
+    	<script>
+    		function calc(){
+    			let a = Number(document.getElementById("n1").value);
+    			let b = Number(document.getElementById("n2").value);
+    			let op = document.getElementById("op").value;
+    			let r;
+
+    			if(op=="+") r=a+b;
+    			if(op=="-") r=a-b;
+    			if(op=="*") r=a*b;
+    			if(op=="/") r=a/b;
+
+
+    			document.getElementById("res").innerHTML = "Result: "+r;
+    		}
+    	</script>
+    	
+
+</body>
+</html>
