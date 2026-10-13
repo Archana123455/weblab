@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form Validation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="3styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6fa;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #004085;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 400px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+        }
+    </style>
+
+    <!-- JavaScript Validation -->
+    <script>
+        function validateForm() {
+            let name = document.getElementById("fname").value.trim();
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+
+            let valid = true;
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("passError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("mobileError").innerHTML = "";
+            document.getElementById("successMsg").innerHTML = "";
+
+            if (name === "") {
+                document.getElementById("nameError").innerHTML =
+                    "Please enter your name.";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passError").innerHTML =
+                    "Password must contain at least 6 characters.";
+                valid = false;
+            }
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML =
+                    "Please enter a valid email address.";
+                valid = false;
+            }
+
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (!mobilePattern.test(mobile)) {
+                document.getElementById("mobileError").innerHTML =
+                    "Mobile number must contain exactly 10 digits.";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("successMsg").innerHTML =
+                    "Registration successful!";
+            }
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Page</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname">
+        <span id="nameError" class="error"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passError" class="error"></span>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile">
+        <span id="mobileError" class="error"></span>
+
+        <input type="submit" value="Register">
+
+        <p id="successMsg" class="success"></p>
+
+    </form>
+
+</body>
+</html>
